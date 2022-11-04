@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="State_label">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>20</y>
+      <width>271</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>State</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Setup_button_label">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>500</y>
+      <width>201</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Setup</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Watt_Single_Unit_label">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>280</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>w</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Time_Single_Unit_label">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>470</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>s</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Temp_Single_Data_label">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>490</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>25</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Channel_Single_State_label">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>190</y>
+      <width>221</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Channel State</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Temp_Single_Symbol_label">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>490</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Temp</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Temp_Single_Unit_label">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>490</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ºc</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ExTemp_Data_label">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>70</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>23</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ExTemp_label">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>80</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Temp</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ExTemp_Unit_label">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>80</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ºc</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Channel_Select_Button">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Channel Select</string>
+    </property>
+   </widget>
+   <widget class="Line" name="Watt_Single_line">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>330</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="Time_Single_line">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>520</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="Watt_Single_lcd">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>190</y>
+      <width>201</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="digitCount">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="Time_Single_lcd">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>430</y>
+      <width>281</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="digitCount">
+     <number>6</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Watt_Multi_Unit_label">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>280</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>w</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Watt_Multi_Symbol_label">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>260</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Watt</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="Watt_Multi_lcd">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>190</y>
+      <width>201</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="digitCount">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="Line" name="Watt_Multi_line">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>330</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="Time_Multi_lcd">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>170</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="digitCount">
+     <number>6</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Time_Multi_Unit_label">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>160</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>s</string>
+    </property>
+   </widget>
+   <widget class="Line" name="Time_Multi_line">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>220</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Channel_Multi_State_label">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>470</y>
+      <width>311</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Channel State</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Temp_Multi_Symbol_label">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>380</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Temp</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Temp_Multi_Data_label">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>380</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>25</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Temp_Multi_Unit_label">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>390</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ºc</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Error_Button">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Error</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Alert_Button">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>10</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Alert</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Switching_Interval_Unit_label">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>160</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>s</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Switching_Interval_Data_label">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>160</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>25</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Down_button_label">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>380</y>
+      <width>131</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Up_button_label">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>250</y>
+      <width>131</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Time_tag_label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>370</y>
+      <width>451</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Watt_tag_label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>150</y>
+      <width>451</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="image_screen">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1031</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="History_button_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Multi_Time_Switching_tag_label">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>140</y>
+      <width>671</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Watt_Single_Symbol_label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>260</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Watt</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Track_title_label">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>20</y>
+      <width>151</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TRACK</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Track_button_label">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>85</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Track</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Track_data_label">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>85</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TRACK</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Channel_Multi_bar_label">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>480</y>
+      <width>391</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Channel Multi Bar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Channel_Single_bar_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>401</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Channel Single Bar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Channel_Multi_Symbol_label">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>500</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2Ch</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Channel_Single_Symbol_label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>500</y>
+      <width>121</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1Ch</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Time_Multi_Symbol_label">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>160</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Time</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Switching_Multi_Symbol_label">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>160</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Interval</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Time_Single_Symbol_label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>440</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Time</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RF_StartStop_Button">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RF Start</string>
+    </property>
+   </widget>
+   <zorder>image_screen</zorder>
+   <zorder>Channel_Single_bar_label</zorder>
+   <zorder>Channel_Multi_bar_label</zorder>
+   <zorder>Time_tag_label</zorder>
+   <zorder>Watt_tag_label</zorder>
+   <zorder>State_label</zorder>
+   <zorder>Setup_button_label</zorder>
+   <zorder>Watt_Single_Unit_label</zorder>
+   <zorder>Time_Single_Unit_label</zorder>
+   <zorder>Temp_Single_Data_label</zorder>
+   <zorder>Temp_Single_Symbol_label</zorder>
+   <zorder>Temp_Single_Unit_label</zorder>
+   <zorder>ExTemp_Data_label</zorder>
+   <zorder>ExTemp_label</zorder>
+   <zorder>ExTemp_Unit_label</zorder>
+   <zorder>Channel_Select_Button</zorder>
+   <zorder>Watt_Single_line</zorder>
+   <zorder>Time_Single_line</zorder>
+   <zorder>Watt_Single_lcd</zorder>
+   <zorder>Time_Single_lcd</zorder>
+   <zorder>Watt_Multi_Unit_label</zorder>
+   <zorder>Watt_Multi_Symbol_label</zorder>
+   <zorder>Watt_Multi_lcd</zorder>
+   <zorder>Watt_Multi_line</zorder>
+   <zorder>Temp_Multi_Symbol_label</zorder>
+   <zorder>Temp_Multi_Data_label</zorder>
+   <zorder>Temp_Multi_Unit_label</zorder>
+   <zorder>Error_Button</zorder>
+   <zorder>Alert_Button</zorder>
+   <zorder>Down_button_label</zorder>
+   <zorder>Up_button_label</zorder>
+   <zorder>History_button_label</zorder>
+   <zorder>Multi_Time_Switching_tag_label</zorder>
+   <zorder>Switching_Interval_Data_label</zorder>
+   <zorder>Switching_Interval_Unit_label</zorder>
+   <zorder>Time_Multi_line</zorder>
+   <zorder>Time_Multi_lcd</zorder>
+   <zorder>Time_Multi_Unit_label</zorder>
+   <zorder>Watt_Single_Symbol_label</zorder>
+   <zorder>Track_title_label</zorder>
+   <zorder>Track_button_label</zorder>
+   <zorder>Track_data_label</zorder>
+   <zorder>Channel_Single_State_label</zorder>
+   <zorder>Channel_Multi_State_label</zorder>
+   <zorder>Channel_Multi_Symbol_label</zorder>
+   <zorder>Channel_Single_Symbol_label</zorder>
+   <zorder>Time_Multi_Symbol_label</zorder>
+   <zorder>Switching_Multi_Symbol_label</zorder>
+   <zorder>Time_Single_Symbol_label</zorder>
+   <zorder>RF_StartStop_Button</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
